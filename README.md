@@ -1,0 +1,1 @@
+# persian-dns-changer
