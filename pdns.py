@@ -22,42 +22,45 @@ def R3288():
             system('cls')
             print(txt_color.Cyan+"""█▀▀█ █▀▀ █▀▀█ █▀▀ ░▀░ █▀▀█ █▀▀▄ ░ ░ █▀▀▄ █▀▀▄ █▀▀ ░ ░ █▀▀ █░░█ █▀▀█ █▀▀▄ █▀▀▀ █▀▀ █▀▀█
 █░░█ █▀▀ █▄▄▀ ▀▀█ ▀█▀ █▄▄█ █░░█ ▀ ▀ █░░█ █░░█ ▀▀█ ▀ ▀ █░░ █▀▀█ █▄▄█ █░░█ █░▀█ █▀▀ █▄▄▀
-█▀▀▀ ▀▀▀ ▀░▀▀ ▀▀▀ ▀▀▀ ▀░░▀ ▀░░▀ ░ ░ ▀▀▀░ ▀░░▀ ▀▀▀ ░ ░ ▀▀▀ ▀░░▀ ▀░░▀ ▀░░▀ ▀▀▀▀ ▀▀▀ ▀░▀▀"""+txt_color.WHITE)
-            
+█▀▀▀ ▀▀▀ ▀░▀▀ ▀▀▀ ▀▀▀ ▀░░▀ ▀░░▀ ░ ░ ▀▀▀░ ▀░░▀ ▀▀▀ ░ ░ ▀▀▀ ▀░░▀ ▀░░▀ ▀░░▀ ▀▀▀▀ ▀▀▀ ▀░▀▀ by rezaa.em"""+txt_color.WHITE)
+
             print('----------------------------------------\n')
             if 'DNS request timed out.' in output:
                 print(output+txt_color.YELLOW+'recommand to check network and change dns'+txt_color.WHITE)
             else:
                 print(output)
             print('----------------------------------------\n')
-            print("1. electro -> (electrotm.org)\n2. shecan -> (shecan.ir)\n3. google\n4. cloudflare\n5. Reset to default\n6. Exit")
+            print("1. Electro -> (electrotm.org)\n2. Shecan -> (shecan.ir)\n3. Begzar\n4. Cloudflare\n5. Google\n6. Reset to default\n7. Exit")
             print('\n----------------------------------------\n')
             
-            choice=input("Enter your choice [1-6] : ")
+            choice=input("Enter your choice [1-7] : ")
             
-            if choice not in ['1','2','3','4','5','6']:
+            if choice not in ['1','2','3','4','5','6','7']:
                 continue
             else :choice = int(choice)
             print(txt_color.YELLOW+'changing dns ...'+txt_color.WHITE)
-            if choice == 6:
+            if choice == 7:
                 system('cls')
                 print("tnx for use\nExiting...")
                 sleep(1)
                 break
             elif choice == 1:
                 system('python op1.py')
-                provider="electro"
+                provider="Electro"
             elif choice == 2:
                 system('python op2.py')
-                provider="shecan"
-            elif choice == 3:
+                provider="Shecan"
+            elif choice==3:
                 system('python op3.py')
-                provider="google"
+                provider='Begzar'
             elif choice == 4:
                 system('python op4.py')
-                provider="cloudflare"
+                provider="Cloudflare"
             elif choice == 5:
                 system('python op5.py')
+                provider="Google"
+            elif choice == 6:
+                system('python op6.py')
                 provider="default"
             print(txt_color.GREEN+f"The DNS has been changed to {provider} successfully."+txt_color.WHITE)
             sleep(3)
@@ -66,5 +69,5 @@ def R3288():
 
     except KeyError:
         print(KeyError+'\n'+txt_color.RED+'for reslove problem contact with me : @R3288')
-
-R3288()
+if __name__=='__main__':
+    R3288()
