@@ -30,7 +30,7 @@ def R3288():
             else:
                 print(output)
             print('----------------------------------------\n')
-            print("1. Electro -> (electrotm.org)\n2. Shecan -> (shecan.ir)\n3. Begzar\n4. Cloudflare\n5. Google\n6. Reset to default\n7. Exit")
+            print("1. Electro -> (electrotm.org)\n2. Shecan -> (shecan.ir)\n3. Begzar -> (begzar.ir)\n4. Cloudflare\n5. Google\n6. Reset to default\n7. Exit")
             print('\n----------------------------------------\n')
             
             choice=input("Enter your choice [1-7] : ")
@@ -41,8 +41,9 @@ def R3288():
             print(txt_color.YELLOW+'changing dns ...'+txt_color.WHITE)
             if choice == 7:
                 system('cls')
+                print('This program has no affiliation and connection with DNS provider services and only uses their IP for personal use.')
                 print("tnx for use\nExiting...")
-                sleep(1)
+                sleep(3)
                 break
             elif choice == 1:
                 system('python op1.py')
