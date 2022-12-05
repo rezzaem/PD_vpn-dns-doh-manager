@@ -1,4 +1,6 @@
-# from os import system
+#python -m pip install --upgrade pywin32 -> this is for access Windows APIs from python / used in command_runner
+#pip install command_runner
+
 from os import system
 from time import sleep
 from command_runner import command_runner
@@ -22,7 +24,7 @@ def R3288():
             system('cls')
             print(txt_color.Cyan+"""█▀▀█ █▀▀ █▀▀█ █▀▀ ░▀░ █▀▀█ █▀▀▄ ░ ░ █▀▀▄ █▀▀▄ █▀▀ ░ ░ █▀▀ █░░█ █▀▀█ █▀▀▄ █▀▀▀ █▀▀ █▀▀█
 █░░█ █▀▀ █▄▄▀ ▀▀█ ▀█▀ █▄▄█ █░░█ ▀ ▀ █░░█ █░░█ ▀▀█ ▀ ▀ █░░ █▀▀█ █▄▄█ █░░█ █░▀█ █▀▀ █▄▄▀
-█▀▀▀ ▀▀▀ ▀░▀▀ ▀▀▀ ▀▀▀ ▀░░▀ ▀░░▀ ░ ░ ▀▀▀░ ▀░░▀ ▀▀▀ ░ ░ ▀▀▀ ▀░░▀ ▀░░▀ ▀░░▀ ▀▀▀▀ ▀▀▀ ▀░▀▀ by rezaa.em"""+txt_color.WHITE)
+█▀▀▀ ▀▀▀ ▀░▀▀ ▀▀▀ ▀▀▀ ▀░░▀ ▀░░▀ ░ ░ ▀▀▀░ ▀░░▀ ▀▀▀ ░ ░ ▀▀▀ ▀░░▀ ▀░░▀ ▀░░▀ ▀▀▀▀ ▀▀▀ ▀░▀▀ by rezza.em"""+txt_color.WHITE)
 
             print('----------------------------------------\n')
             if 'DNS request timed out.' in output:
