@@ -1,192 +1,27 @@
 
 ########### new DNS resolved : ##############
-{'encrypted-tbn0.gstatic.com': '172.217.22.46',
- 'mtalk.google.com': '64.233.166.188',
- 'phishing-detection.metafi.codefi.network': '104.18.22.104',
- 'optimizationguide-pa.googleapis.com': '142.251.37.74',
- 'vscode-sync.trafficmanager.net': '13.69.68.64',
- 'api.dastyar.io': '194.5.195.85',
- 'dl.dastyar.io': '185.208.173.3',
- 'mobile.events.data.microsoft.com': '20.42.65.88',
- 'content-autofill.googleapis.com': '172.217.22.74',
- 'rr2---sn-vh5ouxa-hjuk.googlevideo.com': '213.202.7.17',
- 'clients4.google.com': '172.217.22.46',
- 'rr10---sn-vh5ouxa-hjud.googlevideo.com': '213.202.6.25',
- 'rr6---sn-vh5ouxa-hjuz.googlevideo.com': '134.0.218.209',
- 'safebrowsing.google.com': '172.217.22.46',
- 'suggestqueries-clients6.youtube.com': '172.217.22.46',
- 'rr5---sn-vh5ouxa-hjuk.googlevideo.com': '213.202.7.20',
- 'rr4---sn-vh5ouxa-hjuz.googlevideo.com': '134.0.218.207',
- 'array603.prod.do.dsp.mp.microsoft.com': '51.104.162.50',
- 'rr9---sn-vh5ouxa-hjuk.googlevideo.com': '213.202.7.24',
- 'rr3---sn-vh5ouxa-hjud.googlevideo.com': '213.202.6.18',
- 'rr7---sn-vh5ouxa-hjud.googlevideo.com': '213.202.6.22',
- 'rr4---sn-vh5ouxa-hjuk.googlevideo.com': '213.202.7.19',
- 'updates.discord.com': '162.159.128.233',
- 'discord.com': '162.159.135.232',
- 'gateway.discord.gg': '162.159.134.234',
- 'api.spotify.com': '35.186.224.25',
- 'status.discord.com': '162.159.128.233',
- 'dealer.spotify.com': '34.111.115.192',
- 'cdn.discordapp.com': '162.159.130.233',
- 'latency.discord.media': '162.159.128.235',
- 'clientservices.googleapis.com': '172.217.22.67',
- 'gateway-us-east1-c.discord.gg': '162.159.134.234',
- 'filedownload.lenovo.com': '2.19.12.219',
- 'az700632.vo.msecnd.net': '152.199.19.161',
- 'visualstudio-devdiv-c2s.msedge.net': '13.107.5.88',
- 'go.microsoft.com': '2.19.14.57',
- 'aka.ms': '184.30.26.68',
- 'vortex.data.microsoft.com': '20.50.73.10',
- 'events.data.microsoft.com': '52.178.17.3',
- 'assets.msn.com': '2.19.185.64',
- 'rr11---sn-vh5ouxa-hjud.googlevideo.com': '213.202.6.26',
- 'rr10---sn-vh5ouxa-hjuk.googlevideo.com': '213.202.7.25',
+{'a.nel.cloudflare.com': '35.190.80.1',
  'rr2---sn-hju7en7r.googlevideo.com': '74.125.167.88',
- 'rr6---sn-vh5ouxa-hjuk.googlevideo.com': '213.202.7.21',
- 'rr5---sn-4g5lznlz.googlevideo.com': '74.125.104.74',
- 'rr8---sn-vh5ouxa-hjuk.googlevideo.com': '213.202.7.23',
- 'rr5---sn-vh5ouxa-hjud.googlevideo.com': '213.202.6.20',
- 'rr1---sn-4g5lznez.googlevideo.com': '74.125.160.198',
+ 'rr7---sn-vh5ouxa-hjud.googlevideo.com': '213.202.6.22',
+ 'api.spotify.com': '35.186.224.25',
+ 'dealer.spotify.com': '34.111.115.192',
  'rr3---sn-hju7enll.googlevideo.com': '74.125.98.8',
- 'rr5---sn-4g5e6nss.googlevideo.com': '173.194.182.202',
- 'play.googleapis.com': '172.217.22.106',
- 'oauthaccountmanager.googleapis.com': '142.251.142.202',
- 'rr1---sn-vh5ouxa-hjuk.googlevideo.com': '213.202.7.16',
- 'cloudsearch.googleapis.com': '172.217.22.10',
- 'id.google.com': '172.217.22.35',
- 'www.googleapis.com': '172.217.22.74',
- 'www.geeksforgeeks.org': '18.165.220.119',
- 'www.googleadservices.com': '172.217.22.98',
- 'ogs.google.com': '142.251.37.78',
- 'encrypted-vtbn0.gstatic.com': '172.217.22.14',
- 'chat.openai.com': '104.18.37.228',
- 'tcr9i.chat.openai.com': '104.18.33.170',
- 'api-iam.intercom.io': '34.227.35.193',
- 'events.statsigapi.net': '34.120.214.181',
- 'fp-vs-nocache.azureedge.net': '152.199.19.161',
- 'www.bing.com': '2.19.185.91',
- 'chatgpt.com': '104.18.32.115',
- 'widget.intercom.io': '18.244.114.16',
- 'featuregates.org': '34.120.214.181',
- 'statsigapi.net': '34.120.214.181',
- 'js.intercomcdn.com': '65.9.95.32',
- 'pypi.org': '151.101.128.223',
- 'files.pythonhosted.org': '151.101.1.55',
- 'v10.events.data.microsoft.com': '20.42.65.85',
- 'api.naea1.uds.lenovo.com': '104.16.144.246',
- 'az764295.vo.msecnd.net': '152.199.19.160',
- 'x1.c.lencr.org': '23.34.42.209',
- 'x2.c.lencr.org': '23.34.42.209',
- 'ocsp.entrust.net': '2.19.14.32',
- 'ocsp.digicert.com': '192.229.221.95',
- 'crl3.digicert.com': '192.229.221.95',
- 'crl4.digicert.com': '192.229.221.95',
- 'array609.prod.do.dsp.mp.microsoft.com': '51.104.167.255',
- 'settings-win.data.microsoft.com': '20.44.239.154',
- 'fcmconnection.googleapis.com': '142.251.142.202',
- 'fcmtoken.googleapis.com': '142.251.142.202',
- 'ctldl.windowsupdate.com': '93.184.221.240',
- 'a.nel.cloudflare.com': '35.190.80.1'}
+ 'rr4---sn-vh5ouxa-hjud.googlevideo.com': '213.202.6.19',
+ 'clients4.google.com': '172.217.22.46'}
 #############################################
 
 ########### ALL INFO : ######################
-{142.250.186.36	 	UL=110.004 KB	DL=2885.487 KB	filtered=-------	Host=yt3.ggpht.com	
- 203.32.120.226	 	UL=64.54 KB	DL=210.11 KB	filtered=-------	Host=cloudflare-dns.com	
- 142.250.185.174	 	UL=5.409 KB	DL=4.0 KB	filtered=-------	Host=www.google-analytics.com	
- 216.239.38.120	 	UL=2199.147 KB	DL=14747.131 KB	filtered=-------	Host=www.youtube.com	
- 172.217.22.46	 	UL=121.88 KB	DL=189.165 KB	filtered=-------	Host=suggestqueries-clients6.youtube.com	
- 64.233.166.188	 	UL=145.967 KB	DL=1333.285 KB	filtered=-------	Host=mtalk.google.com	
- 89.58.57.45	 	UL=51.3 KB	DL=0.0 KB	filtered= yes	Host=fonts.googleapis.com	
- 104.18.22.104	 	UL=2.403 KB	DL=7.171 KB	filtered=-------	Host=phishing-detection.metafi.codefi.network	
- 142.251.37.74	 	UL=17.095 KB	DL=31.807 KB	filtered=-------	Host=optimizationguide-pa.googleapis.com	
- 13.69.68.64	 	UL=33.092 KB	DL=132.104 KB	filtered=-------	Host=vscode-sync.trafficmanager.net	
- 194.5.195.85	 	UL=23.656 KB	DL=44.409 KB	filtered=-------	Host=api.dastyar.io	
- 185.208.173.3	 	UL=1.718 KB	DL=14.586 KB	filtered=-------	Host=dl.dastyar.io	
- 20.42.65.88	 	UL=40.896 KB	DL=0.0 KB	filtered= yes	Host=mobile.events.data.microsoft.com	
- 45.157.177.108	 	UL=25.366 KB	DL=0.0 KB	filtered= yes	Host=googleads.g.doubleclick.net	
- 172.217.22.74	 	UL=22.477 KB	DL=85.818 KB	filtered=-------	Host=www.googleapis.com	
- 142.250.185.99	 	UL=41.471 KB	DL=845.736 KB	filtered=-------	Host=www.gstatic.com	
- 172.217.16.206	 	UL=45.293 KB	DL=54.013 KB	filtered=-------	Host=accounts.youtube.com	
- 193.26.157.66	 	UL=11.938 KB	DL=0.0 KB	filtered= yes	Host=lh3.googleusercontent.com	
- 213.202.7.17	 	UL=26.108 KB	DL=619.484 KB	filtered=-------	Host=rr2---sn-vh5ouxa-hjuk.googlevideo.com	
- 213.202.6.25	 	UL=13.07 KB	DL=25.732 KB	filtered=-------	Host=rr10---sn-vh5ouxa-hjud.googlevideo.com	
- 172.217.23.99	 	UL=17.351 KB	DL=128.713 KB	filtered=-------	Host=fonts.gstatic.com	
- 74.125.98.9	 	UL=38.161 KB	DL=1297.809 KB	filtered=-------	Host=rr4---sn-hju7enll.googlevideo.com	
- 216.58.212.174	 	UL=95.984 KB	DL=86.481 KB	filtered=-------	Host=play.google.com	
- 134.0.218.209	 	UL=43.049 KB	DL=2351.846 KB	filtered=-------	Host=rr6---sn-vh5ouxa-hjuz.googlevideo.com	
- 213.202.6.141	 	UL=24.582 KB	DL=1364.974 KB	filtered=-------	Host=rr2---sn-vh5ouxa-hju6.googlevideo.com	
- 213.202.7.20	 	UL=22.505 KB	DL=181.829 KB	filtered=-------	Host=rr5---sn-vh5ouxa-hjuk.googlevideo.com	
- 134.0.218.207	 	UL=109.176 KB	DL=3981.351 KB	filtered=-------	Host=rr4---sn-vh5ouxa-hjuz.googlevideo.com	
- 51.104.162.50	 	UL=6.438 KB	DL=15.144 KB	filtered=-------	Host=array603.prod.do.dsp.mp.microsoft.com	
- 213.202.7.24	 	UL=11.884 KB	DL=172.366 KB	filtered=-------	Host=rr9---sn-vh5ouxa-hjuk.googlevideo.com	
- 213.202.6.18	 	UL=32.047 KB	DL=2539.337 KB	filtered=-------	Host=rr3---sn-vh5ouxa-hjud.googlevideo.com	
- 213.202.6.22	 	UL=415.926 KB	DL=36612.162 KB	filtered=-------	Host=rr7---sn-vh5ouxa-hjud.googlevideo.com	
- 74.125.98.6	 	UL=14.02 KB	DL=377.445 KB	filtered=-------	Host=rr1---sn-hju7enll.googlevideo.com	
- 202.61.195.218	 	UL=5.618 KB	DL=0.0 KB	filtered= yes	Host=safebrowsing.googleapis.com	
- 74.125.167.92	 	UL=7.331 KB	DL=31.822 KB	filtered=-------	Host=rr6---sn-hju7en7r.googlevideo.com	
- 213.202.7.19	 	UL=3.764 KB	DL=29.836 KB	filtered=-------	Host=rr4---sn-vh5ouxa-hjuk.googlevideo.com	
- 162.159.128.233	 	UL=2.492 KB	DL=18.001 KB	filtered=-------	Host=status.discord.com	
- 162.159.135.232	 	UL=155.779 KB	DL=1151.855 KB	filtered=-------	Host=discord.com	
- 162.159.134.234	 	UL=58.315 KB	DL=1032.289 KB	filtered=-------	Host=gateway-us-east1-c.discord.gg	
- 35.186.224.25	 	UL=76.794 KB	DL=212.737 KB	filtered=-------	Host=api.spotify.com	
- 34.111.115.192	 	UL=106.986 KB	DL=57.948 KB	filtered=-------	Host=dealer.spotify.com	
- 162.159.130.233	 	UL=2.386 KB	DL=9.764 KB	filtered=-------	Host=cdn.discordapp.com	
- 162.159.128.235	 	UL=1.106 KB	DL=3.873 KB	filtered=-------	Host=latency.discord.media	
- 172.217.22.67	 	UL=4.778 KB	DL=11.019 KB	filtered=-------	Host=clientservices.googleapis.com	
- 2.19.12.219	 	UL=1.234 KB	DL=0.0 KB	filtered= yes	Host=filedownload.lenovo.com	
- 152.199.19.161	 	UL=4.536 KB	DL=51.876 KB	filtered=-------	Host=fp-vs-nocache.azureedge.net	
- 13.107.5.88	 	UL=1.465 KB	DL=12.047 KB	filtered=-------	Host=visualstudio-devdiv-c2s.msedge.net	
- 2.19.14.57	 	UL=0.336 KB	DL=0.0 KB	filtered= yes	Host=go.microsoft.com	
- 184.30.26.68	 	UL=0.475 KB	DL=0.0 KB	filtered= yes	Host=aka.ms	
- 20.50.73.10	 	UL=0.354 KB	DL=0.0 KB	filtered= yes	Host=vortex.data.microsoft.com	
- 52.178.17.3	 	UL=4.38 KB	DL=4.934 KB	filtered=-------	Host=events.data.microsoft.com	
- 2.19.185.89	 	UL=0.264 KB	DL=0.0 KB	filtered= yes	Host=?	
- 2.19.185.64	 	UL=6.805 KB	DL=0.0 KB	filtered= yes	Host=assets.msn.com	
- 213.202.6.26	 	UL=66.996 KB	DL=1403.46 KB	filtered=-------	Host=rr11---sn-vh5ouxa-hjud.googlevideo.com	
- 213.202.7.25	 	UL=26.389 KB	DL=1612.006 KB	filtered=-------	Host=rr10---sn-vh5ouxa-hjuk.googlevideo.com	
- 74.125.167.88	 	UL=283.91 KB	DL=32155.198 KB	filtered=-------	Host=rr2---sn-hju7en7r.googlevideo.com	
- 213.202.6.140	 	UL=12.312 KB	DL=33.91 KB	filtered=-------	Host=rr1---sn-vh5ouxa-hju6.googlevideo.com	
- 213.202.7.21	 	UL=1.213 KB	DL=9.945 KB	filtered=-------	Host=rr6---sn-vh5ouxa-hjuk.googlevideo.com	
- 74.125.104.74	 	UL=23.433 KB	DL=6962.586 KB	filtered=-------	Host=rr5---sn-4g5lznlz.googlevideo.com	
- 213.202.7.23	 	UL=1.851 KB	DL=14.918 KB	filtered=-------	Host=rr8---sn-vh5ouxa-hjuk.googlevideo.com	
- 213.202.6.20	 	UL=34.013 KB	DL=981.474 KB	filtered=-------	Host=rr5---sn-vh5ouxa-hjud.googlevideo.com	
- 213.202.6.144	 	UL=47.955 KB	DL=1561.483 KB	filtered=-------	Host=rr5---sn-vh5ouxa-hju6.googlevideo.com	
- 74.125.98.7	 	UL=10.094 KB	DL=19.326 KB	filtered=-------	Host=rr2---sn-hju7enll.googlevideo.com	
- 74.125.160.198	 	UL=12.504 KB	DL=649.103 KB	filtered=-------	Host=rr1---sn-4g5lznez.googlevideo.com	
- 74.125.98.8	 	UL=3.48 KB	DL=12.53 KB	filtered=-------	Host=rr3---sn-hju7enll.googlevideo.com	
- 173.194.182.202	 	UL=13.744 KB	DL=965.804 KB	filtered=-------	Host=rr5---sn-4g5e6nss.googlevideo.com	
- 172.217.22.106	 	UL=139.55 KB	DL=40.028 KB	filtered=-------	Host=play.googleapis.com	
- 142.251.142.202	 	UL=14.987 KB	DL=43.174 KB	filtered=-------	Host=fcmtoken.googleapis.com	
- 213.202.7.16	 	UL=1.275 KB	DL=9.945 KB	filtered=-------	Host=rr1---sn-vh5ouxa-hjuk.googlevideo.com	
- 172.217.22.10	 	UL=1.305 KB	DL=11.4 KB	filtered=-------	Host=cloudsearch.googleapis.com	
- 172.217.22.35	 	UL=2.488 KB	DL=8.579 KB	filtered=-------	Host=id.google.com	
- 172.217.23.110	 	UL=4.679 KB	DL=92.941 KB	filtered=-------	Host=apis.google.com	
- 18.165.220.119	 	UL=1.033 KB	DL=0.0 KB	filtered= yes	Host=www.geeksforgeeks.org	
- 172.217.22.98	 	UL=1.401 KB	DL=5.927 KB	filtered=-------	Host=www.googleadservices.com	
- 172.217.16.205	 	UL=24.966 KB	DL=26.45 KB	filtered=-------	Host=accounts.google.com	
- 142.251.37.78	 	UL=2.497 KB	DL=25.896 KB	filtered=-------	Host=ogs.google.com	
- 142.250.184.195	 	UL=1.059 KB	DL=0.0 KB	filtered= yes	Host=ssl.gstatic.com	
- 172.217.22.14	 	UL=1.334 KB	DL=40.289 KB	filtered=-------	Host=encrypted-vtbn0.gstatic.com	
- 104.18.37.228	 	UL=126.879 KB	DL=48.895 KB	filtered=-------	Host=chat.openai.com	
- 104.18.33.170	 	UL=123.195 KB	DL=69.521 KB	filtered=-------	Host=tcr9i.chat.openai.com	
- 34.120.214.181	 	UL=41.407 KB	DL=27.564 KB	filtered=-------	Host=statsigapi.net	
- 34.227.35.193	 	UL=0.0 KB	DL=0.0 KB	filtered= yes	Host=api-iam.intercom.io	
- 2.19.185.91	 	UL=0.47 KB	DL=0.0 KB	filtered= yes	Host=www.bing.com	
- 104.18.32.115	 	UL=1.323 KB	DL=2.354 KB	filtered=-------	Host=chatgpt.com	
- 18.244.114.16	 	UL=1.316 KB	DL=0.943 KB	filtered= yes	Host=widget.intercom.io	
- 65.9.95.17	 	UL=0.643 KB	DL=0.0 KB	filtered= yes	Host=?	
- 65.9.95.32	 	UL=1.694 KB	DL=36.94 KB	filtered=-------	Host=js.intercomcdn.com	
- 151.101.128.223	 	UL=2.241 KB	DL=10.975 KB	filtered=-------	Host=pypi.org	
- 151.101.1.55	 	UL=1.084 KB	DL=33.358 KB	filtered=-------	Host=files.pythonhosted.org	
- 20.42.65.85	 	UL=1.656 KB	DL=0.0 KB	filtered= yes	Host=v10.events.data.microsoft.com	
- 104.16.144.246	 	UL=0.825 KB	DL=5.141 KB	filtered=-------	Host=api.naea1.uds.lenovo.com	
- 152.199.19.160	 	UL=3.363 KB	DL=16.548 KB	filtered=-------	Host=az764295.vo.msecnd.net	
- 23.34.42.209	 	UL=2.258 KB	DL=15.597 KB	filtered=-------	Host=x2.c.lencr.org	
- 2.19.14.32	 	UL=2.865 KB	DL=0.0 KB	filtered= yes	Host=ocsp.entrust.net	
- 192.229.221.95	 	UL=10.181 KB	DL=67.122 KB	filtered=-------	Host=crl4.digicert.com	
- 51.104.167.255	 	UL=1.303 KB	DL=3.027 KB	filtered=-------	Host=array609.prod.do.dsp.mp.microsoft.com	
- 20.44.239.154	 	UL=0.418 KB	DL=0.0 KB	filtered= yes	Host=settings-win.data.microsoft.com	
- 93.184.221.240	 	UL=1.474 KB	DL=0.0 KB	filtered= yes	Host=ctldl.windowsupdate.com	
- 35.190.80.1	 	UL=1.231 KB	DL=5.496 KB	filtered=-------	Host=a.nel.cloudflare.com	}
+{203.32.120.226	 	UL=4.124 KB	DL=9.91 KB	filtered=-------	Host=cloudflare-dns.com	
+ 216.239.38.120	 	UL=151.006 KB	DL=844.541 KB	filtered=-------	Host=www.youtube.com	
+ 35.190.80.1	 	UL=1.413 KB	DL=5.496 KB	filtered=-------	Host=a.nel.cloudflare.com	
+ 74.125.167.88	 	UL=2.888 KB	DL=192.483 KB	filtered=-------	Host=rr2---sn-hju7en7r.googlevideo.com	
+ 213.202.6.22	 	UL=2.877 KB	DL=10.313 KB	filtered=-------	Host=rr7---sn-vh5ouxa-hjud.googlevideo.com	
+ 213.202.6.144	 	UL=5.697 KB	DL=12.688 KB	filtered=-------	Host=rr5---sn-vh5ouxa-hju6.googlevideo.com	
+ 35.186.224.25	 	UL=1.186 KB	DL=4.429 KB	filtered=-------	Host=api.spotify.com	
+ 142.250.186.36	 	UL=5.204 KB	DL=18.903 KB	filtered=-------	Host=yt3.ggpht.com	
+ 34.111.115.192	 	UL=1.529 KB	DL=0.783 KB	filtered= yes	Host=dealer.spotify.com	
+ 213.202.6.143	 	UL=22.173 KB	DL=458.611 KB	filtered=-------	Host=rr4---sn-vh5ouxa-hju6.googlevideo.com	
+ 74.125.98.8	 	UL=5.516 KB	DL=23.871 KB	filtered=-------	Host=rr3---sn-hju7enll.googlevideo.com	
+ 213.202.6.19	 	UL=7.927 KB	DL=202.693 KB	filtered=-------	Host=rr4---sn-vh5ouxa-hjud.googlevideo.com	
+ 172.217.22.46	 	UL=3.763 KB	DL=9.096 KB	filtered=-------	Host=clients4.google.com	}
 #############################################
