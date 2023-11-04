@@ -116,7 +116,7 @@ def setunset_proxy(proxy=None):
 def doh(item):
     global doh_thread,doh_running,icon_status
 
-    if str(item)=='youtube tunnel ':
+    if str(item)=='DOH (x,youtube tunnel) ':
 
 
         def run_program():
@@ -131,7 +131,7 @@ def doh(item):
         doh_thread.start()
     
         icon_status["p"]=True
-        update_trey('✔️youtube tunnel ','do')
+        update_trey('✔️DOH (x,youtube tunnel) ','do','deactive')
 
     else:
         
@@ -140,7 +140,7 @@ def doh(item):
         doh_running=False
 
         icon_status["p"]=False
-        update_trey('youtube tunnel ','do')
+        update_trey('DOH (x,youtube tunnel) ','do','activate')
 
 
 
@@ -154,7 +154,7 @@ def on_quit(icon):
     icon.stop()
     exit()
     
-def update_trey(txt,place,provider=None): # place : do=doh , dn= dns , vp= vpn, ds= dns status
+def update_trey(txt,place,txt2=None): # place : do=doh , dn= dns , vp= vpn, ds= dns status
 
     global icon_status
     global text_list
@@ -169,12 +169,13 @@ def update_trey(txt,place,provider=None): # place : do=doh , dn= dns , vp= vpn, 
     
     if place =='do':
         text_list[1] =txt
+        text_list[3]=txt2
         icon.update_menu()
     elif place =='dn':
         text_list[0]=txt
     elif place=='ds':
-        if provider!=None:
-            text_list[2]=f'active : {provider}'
+        if txt2!=None:
+            text_list[2]=f'active : {txt2}'
         else:
             text_list[2]=f'active : {txt}'
 
@@ -183,10 +184,10 @@ dns=DNS()
 
 
 
-doh_text='youtube tunnel '
+doh_text='DOH (x,youtube tunnel) '
 dns_text='DNS'
 at_first=dns.get_dns(True)
-text_list=['DNS','youtube tunnel ',at_first]
+text_list=['DNS','DOH (x,youtube tunnel) ',at_first,'activate'] 
 image = Image.open("pd_base2.png")  # Replace 'icon.png' with the path to your own icon
 icon = Icon("Pd",image,"Pd manager :VPN Application", Menu(
 
@@ -202,10 +203,19 @@ icon = Icon("Pd",image,"Pd manager :VPN Application", Menu(
             MenuItem('google',lambda:dns.change_dns('google')),
             MenuItem('cloud',lambda:dns.change_dns('cloud'))
         )),
-        MenuItem('exit',lambda:dns.change_dns('default'))
+        MenuItem('deactive',lambda:dns.change_dns('default'))
     )),
-    MenuItem(lambda text:text_list[1],doh), #doh
-
+    MenuItem(lambda text:text_list[1],Menu(
+        MenuItem(lambda text:text_list[3],doh),
+        MenuItem('isp',Menu(
+            MenuItem('Irancell',None),
+            MenuItem('HamrahAval',None),
+            MenuItem('other',None)
+        ))
+    )), #doh
+     MenuItem('VPN',Menu(
+        MenuItem('comming soon',None)
+    )),
     MenuItem('exit', on_quit)
 ))
 
