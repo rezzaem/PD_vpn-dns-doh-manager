@@ -10,11 +10,11 @@ import wmi
 doh_thread = None
 doh_running=False
 icon_status={"p":False,"d":False}
-
 icon=None
 
+
 class DNS :
-               
+        c = wmi.WMI()       
         SHECAN = ['178.22.122.100', '185.51.200.2']
         F403 = ['10.202.10.202', '10.202.10.102']
         RADAR=['10.202.10.10','10.202.10.11']
@@ -48,21 +48,55 @@ class DNS :
                 self.primary_dns=self.GOOGLE[0]
                 self.secondary_dns=self.GOOGLE[1]
 
-            c = wmi.WMI()
+            
             if self.clear ==False:
-                for interface in c.Win32_NetworkAdapterConfiguration(IPEnabled=True):
+                
+                for interface in self.c.Win32_NetworkAdapterConfiguration(IPEnabled=True):
                     if interface.DNSServerSearchOrder:
                         dns = [self.primary_dns, self.secondary_dns]
                         
                         status=interface.SetDNSServerSearchOrder(dns)
                         icon_status["d"]=True
-                        update_trey('✔️DNS','dn')
+                        update_trey('✔️DNS','dn',provider)
+                
                         
             else:
-                for interface in c.Win32_NetworkAdapterConfiguration(IPEnabled=True):
-                    status=interface.SetDNSServerSearchOrder()
+                for interface in self.c.Win32_NetworkAdapterConfiguration(IPEnabled=True):
+                    interface.SetDNSServerSearchOrder()
                     icon_status["d"]=False
                     update_trey('DNS','dn')
+        def get_dns (self,at_first=False):
+            for interface in self.c.Win32_NetworkAdapterConfiguration(IPEnabled=True):
+                if interface.DNSServerSearchOrder:
+                    current=interface.DNSServerSearchOrder[0]
+            try:        
+                    if current==self.SHECAN[0]:
+                        current='shecan'
+                    elif current==self.ELECTRO[0]:
+                        current='electro'
+                    elif current==self.F403[0]:
+                        current='403'
+                    elif current==self.RADAR[0]:
+                        current='radar'
+                    elif current==self.CLOUD[0]:
+                        current='cloud'
+                    elif current==self.GOOGLE[0]:
+                        current='google'
+                    else :
+                        current=current
+            except:
+                    current='None'
+            if at_first==False:
+                update_trey(current,'do')
+            else :
+                return f'active : {current}'
+
+
+
+            
+            # else :
+            #     update_trey(None
+
 
 
 def setunset_proxy(proxy=None):
@@ -82,7 +116,7 @@ def setunset_proxy(proxy=None):
 def doh(item):
     global doh_thread,doh_running,icon_status
 
-    if str(item)=='تونل یوتوب ':
+    if str(item)=='youtube tunnel ':
 
 
         def run_program():
@@ -97,7 +131,7 @@ def doh(item):
         doh_thread.start()
     
         icon_status["p"]=True
-        update_trey('✔️تونل یوتوب ','do')
+        update_trey('✔️youtube tunnel ','do')
 
     else:
         
@@ -106,7 +140,7 @@ def doh(item):
         doh_running=False
 
         icon_status["p"]=False
-        update_trey('تونل یوتوب ','do')
+        update_trey('youtube tunnel ','do')
 
 
 
@@ -120,51 +154,59 @@ def on_quit(icon):
     icon.stop()
     exit()
     
-def update_trey(txt,place): # place : do=doh , dn= dns , vp= vpn
-    global icon
+def update_trey(txt,place,provider=None): # place : do=doh , dn= dns , vp= vpn, ds= dns status
+
     global icon_status
     global text_list
     if icon_status['p']==True and icon_status['d']==False:
-        icon.icon=Image.open("pd_p_on.png")
+        Icon.icon=Image.open("pd_p_on.png")
     elif icon_status['d']==True and icon_status['p']==False:
-        icon.icon=Image.open("pd_d_on.png")
+        Icon.icon=Image.open("pd_d_on.png")
     elif icon_status['p']==True and icon_status['d']==True:
-        icon.icon=Image.open("pd_both_on.png")
+        Icon.icon=Image.open("pd_both_on.png")
     elif icon_status['p']==False and icon_status['d']==False:
-        icon.icon=Image.open("pd_base2.png")
+        Icon.icon=Image.open("pd_base2.png")
     
     if place =='do':
         text_list[1] =txt
         icon.update_menu()
     elif place =='dn':
         text_list[0]=txt
+    elif place=='ds':
+        if provider!=None:
+            text_list[2]=f'active : {provider}'
+        else:
+            text_list[2]=f'active : {txt}'
+
 # -------- run --------
 dns=DNS()
 
 
-dns_result='چک کردن وضعیت دی ان اس'
-doh_text='تونل یوتوب '
+
+doh_text='youtube tunnel '
 dns_text='DNS'
-text_list=['DNS','تونل یوتوب ']
+at_first=dns.get_dns(True)
+text_list=['DNS','youtube tunnel ',at_first]
 image = Image.open("pd_base2.png")  # Replace 'icon.png' with the path to your own icon
 icon = Icon("Pd",image,"Pd manager :VPN Application", Menu(
-    # MenuItem(lambda text:dns_result,dns_for_first_time),
-    MenuItem(lambda text:text_list[0],Menu(
-        MenuItem('تحریم گذر',Menu(
-            MenuItem('شکن',lambda:dns.change_dns('shecan')),
-            MenuItem('403',lambda:dns.change_dns('f403')),
-            MenuItem('رادار🎮',lambda:dns.change_dns('radar')),
-            MenuItem('الکترو🎮',lambda:dns.change_dns('electro'))
-        )),
-        MenuItem('بهبود دهنده',Menu(
-            MenuItem('گوگل',lambda:dns.change_dns('google')),
-            MenuItem('کلود',lambda:dns.change_dns('cloud'))
-        )),
-        MenuItem('خاموش',lambda:dns.change_dns('default'))
-    )),
-    MenuItem(lambda text:text_list[1],doh),
 
-    MenuItem('خروج', on_quit)
+    MenuItem(lambda text:text_list[0],Menu( #dns
+        MenuItem(lambda text:text_list[2],lambda :dns.get_dns()),
+        MenuItem('bypasser',Menu(
+            MenuItem('shecan',lambda:dns.change_dns('shecan')),
+            MenuItem('403',lambda:dns.change_dns('f403')),
+            MenuItem('radar🎮',lambda:dns.change_dns('radar')),
+            MenuItem('electro🎮',lambda:dns.change_dns('electro'))
+        )),
+        MenuItem('better net',Menu(
+            MenuItem('google',lambda:dns.change_dns('google')),
+            MenuItem('cloud',lambda:dns.change_dns('cloud'))
+        )),
+        MenuItem('exit',lambda:dns.change_dns('default'))
+    )),
+    MenuItem(lambda text:text_list[1],doh), #doh
+
+    MenuItem('exit', on_quit)
 ))
 
 
