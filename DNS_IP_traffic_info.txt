@@ -1,27 +1,17 @@
 
 ########### new DNS resolved : ##############
-{'a.nel.cloudflare.com': '35.190.80.1',
- 'rr2---sn-hju7en7r.googlevideo.com': '74.125.167.88',
- 'rr7---sn-vh5ouxa-hjud.googlevideo.com': '213.202.6.22',
- 'api.spotify.com': '35.186.224.25',
- 'dealer.spotify.com': '34.111.115.192',
- 'rr3---sn-hju7enll.googlevideo.com': '74.125.98.8',
- 'rr4---sn-vh5ouxa-hjud.googlevideo.com': '213.202.6.19',
- 'clients4.google.com': '172.217.22.46'}
+{'www.googleapis.com': '142.251.142.202',
+ 'play.googleapis.com': '172.217.22.42',
+ 'clients2.google.com': '142.251.142.206',
+ 'a.nel.cloudflare.com': '35.190.80.1',
+ 'mainnet.infura.io': '18.232.210.30'}
 #############################################
 
 ########### ALL INFO : ######################
-{203.32.120.226	 	UL=4.124 KB	DL=9.91 KB	filtered=-------	Host=cloudflare-dns.com	
- 216.239.38.120	 	UL=151.006 KB	DL=844.541 KB	filtered=-------	Host=www.youtube.com	
- 35.190.80.1	 	UL=1.413 KB	DL=5.496 KB	filtered=-------	Host=a.nel.cloudflare.com	
- 74.125.167.88	 	UL=2.888 KB	DL=192.483 KB	filtered=-------	Host=rr2---sn-hju7en7r.googlevideo.com	
- 213.202.6.22	 	UL=2.877 KB	DL=10.313 KB	filtered=-------	Host=rr7---sn-vh5ouxa-hjud.googlevideo.com	
- 213.202.6.144	 	UL=5.697 KB	DL=12.688 KB	filtered=-------	Host=rr5---sn-vh5ouxa-hju6.googlevideo.com	
- 35.186.224.25	 	UL=1.186 KB	DL=4.429 KB	filtered=-------	Host=api.spotify.com	
- 142.250.186.36	 	UL=5.204 KB	DL=18.903 KB	filtered=-------	Host=yt3.ggpht.com	
- 34.111.115.192	 	UL=1.529 KB	DL=0.783 KB	filtered= yes	Host=dealer.spotify.com	
- 213.202.6.143	 	UL=22.173 KB	DL=458.611 KB	filtered=-------	Host=rr4---sn-vh5ouxa-hju6.googlevideo.com	
- 74.125.98.8	 	UL=5.516 KB	DL=23.871 KB	filtered=-------	Host=rr3---sn-hju7enll.googlevideo.com	
- 213.202.6.19	 	UL=7.927 KB	DL=202.693 KB	filtered=-------	Host=rr4---sn-vh5ouxa-hjud.googlevideo.com	
- 172.217.22.46	 	UL=3.763 KB	DL=9.096 KB	filtered=-------	Host=clients4.google.com	}
+{203.32.120.226	 	UL=2.583 KB	DL=8.468 KB	filtered=-------	Host=cloudflare-dns.com	
+ 142.251.142.202	 	UL=1.47 KB	DL=6.813 KB	filtered=-------	Host=www.googleapis.com	
+ 172.217.22.42	 	UL=30.041 KB	DL=5.824 KB	filtered=-------	Host=play.googleapis.com	
+ 35.190.80.1	 	UL=1.196 KB	DL=5.496 KB	filtered=-------	Host=a.nel.cloudflare.com	
+ 142.251.142.206	 	UL=1.627 KB	DL=8.874 KB	filtered=-------	Host=clients2.google.com	
+ 18.232.210.30	 	UL=0.524 KB	DL=0.0 KB	filtered= yes	Host=mainnet.infura.io	}
 #############################################

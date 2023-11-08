@@ -64,32 +64,46 @@ class DNS :
                 for interface in self.c.Win32_NetworkAdapterConfiguration(IPEnabled=True):
                     interface.SetDNSServerSearchOrder()
                     icon_status["d"]=False
-                    update_trey('DNS','dn')
+                    update_trey('DNS','dn','empty')
+
         def get_dns (self,at_first=False):
             for interface in self.c.Win32_NetworkAdapterConfiguration(IPEnabled=True):
                 if interface.DNSServerSearchOrder:
                     current=interface.DNSServerSearchOrder[0]
+            known=False # for show current dns if at dns list
             try:        
                     if current==self.SHECAN[0]:
                         current='shecan'
+                        known=True
                     elif current==self.ELECTRO[0]:
                         current='electro'
+                        known=True
                     elif current==self.F403[0]:
                         current='403'
+                        known=True
                     elif current==self.RADAR[0]:
                         current='radar'
+                        known=True
                     elif current==self.CLOUD[0]:
                         current='cloud'
+                        known=True
                     elif current==self.GOOGLE[0]:
                         current='google'
+                        known=True
                     else :
-                        current=current
+                        current='unknown'
             except:
                     current='None'
-            if at_first==False:
-                update_trey(current,'do')
-            else :
-                return f'active : {current}'
+            
+            if known==True:
+                update_trey('✔️DNS','dn',current)
+
+            # else :
+
+            # if at_first==False:
+            #     update_trey(,'dn',)
+            # else :
+            #     return f'active : {current}'
 
 
 
@@ -113,10 +127,10 @@ def setunset_proxy(proxy=None):
         winreg.SetValueEx(INTERNET_SETTINGS, "ProxyServer", 0, winreg.REG_SZ, '')
 
 
-def doh(item):
+def doh(txt):
     global doh_thread,doh_running,icon_status
 
-    if str(item)=='DOH (x,youtube tunnel) ':
+    if str(txt)=='activate':
 
 
         def run_program():
@@ -155,17 +169,17 @@ def on_quit(icon):
     exit()
     
 def update_trey(txt,place,txt2=None): # place : do=doh , dn= dns , vp= vpn, ds= dns status
-
+    global icon
     global icon_status
     global text_list
     if icon_status['p']==True and icon_status['d']==False:
-        Icon.icon=Image.open("pd_p_on.png")
+        icon.icon=Image.open("pd_p_on.png")
     elif icon_status['d']==True and icon_status['p']==False:
-        Icon.icon=Image.open("pd_d_on.png")
+        icon.icon=Image.open("pd_d_on.png")
     elif icon_status['p']==True and icon_status['d']==True:
-        Icon.icon=Image.open("pd_both_on.png")
+        icon.icon=Image.open("pd_both_on.png")
     elif icon_status['p']==False and icon_status['d']==False:
-        Icon.icon=Image.open("pd_base2.png")
+        icon.icon=Image.open("pd_base2.png")
     
     if place =='do':
         text_list[1] =txt
@@ -182,10 +196,6 @@ def update_trey(txt,place,txt2=None): # place : do=doh , dn= dns , vp= vpn, ds= 
 # -------- run --------
 dns=DNS()
 
-
-
-doh_text='DOH (x,youtube tunnel) '
-dns_text='DNS'
 at_first=dns.get_dns(True)
 text_list=['DNS','DOH (x,youtube tunnel) ',at_first,'activate'] 
 image = Image.open("pd_base2.png")  # Replace 'icon.png' with the path to your own icon
@@ -193,7 +203,7 @@ icon = Icon("Pd",image,"Pd manager :VPN Application", Menu(
 
     MenuItem(lambda text:text_list[0],Menu( #dns
         MenuItem(lambda text:text_list[2],lambda :dns.get_dns()),
-        MenuItem('bypasser',Menu(
+        MenuItem('bypass',Menu(
             MenuItem('shecan',lambda:dns.change_dns('shecan')),
             MenuItem('403',lambda:dns.change_dns('f403')),
             MenuItem('radar🎮',lambda:dns.change_dns('radar')),
@@ -206,7 +216,7 @@ icon = Icon("Pd",image,"Pd manager :VPN Application", Menu(
         MenuItem('deactive',lambda:dns.change_dns('default'))
     )),
     MenuItem(lambda text:text_list[1],Menu(
-        MenuItem(lambda text:text_list[3],doh),
+        MenuItem(lambda text:text_list[3],lambda:doh(text_list[3])),
         MenuItem('isp',Menu(
             MenuItem('Irancell',None),
             MenuItem('HamrahAval',None),
