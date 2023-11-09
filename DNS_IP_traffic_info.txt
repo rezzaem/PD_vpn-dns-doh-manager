@@ -1,17 +1,21 @@
 
 ########### new DNS resolved : ##############
-{'www.googleapis.com': '142.251.142.202',
- 'play.googleapis.com': '172.217.22.42',
- 'clients2.google.com': '142.251.142.206',
- 'a.nel.cloudflare.com': '35.190.80.1',
- 'mainnet.infura.io': '18.232.210.30'}
+{'pagead2.googlesyndication.com': '172.217.22.66',
+ 'securepubads.g.doubleclick.net': '142.251.37.66',
+ 'clients4.google.com': '172.217.22.14',
+ 'relay-8a6d3372.net.anydesk.com': '138.199.14.86',
+ 'tpc.googlesyndication.com': '172.217.22.97',
+ 'www.canva.com': '104.16.224.149',
+ 'shenoto.com': '185.143.233.110'}
 #############################################
 
 ########### ALL INFO : ######################
-{203.32.120.226	 	UL=2.583 KB	DL=8.468 KB	filtered=-------	Host=cloudflare-dns.com	
- 142.251.142.202	 	UL=1.47 KB	DL=6.813 KB	filtered=-------	Host=www.googleapis.com	
- 172.217.22.42	 	UL=30.041 KB	DL=5.824 KB	filtered=-------	Host=play.googleapis.com	
- 35.190.80.1	 	UL=1.196 KB	DL=5.496 KB	filtered=-------	Host=a.nel.cloudflare.com	
- 142.251.142.206	 	UL=1.627 KB	DL=8.874 KB	filtered=-------	Host=clients2.google.com	
- 18.232.210.30	 	UL=0.524 KB	DL=0.0 KB	filtered= yes	Host=mainnet.infura.io	}
+{203.32.120.226	 	UL=4.351 KB	DL=15.437 KB	filtered=-------	Host=cloudflare-dns.com	
+ 142.251.37.66	 	UL=2.369 KB	DL=6.274 KB	filtered=-------	Host=securepubads.g.doubleclick.net	
+ 172.217.22.66	 	UL=6.323 KB	DL=27.233 KB	filtered=-------	Host=pagead2.googlesyndication.com	
+ 172.217.22.14	 	UL=4.729 KB	DL=9.302 KB	filtered=-------	Host=clients4.google.com	
+ 138.199.14.86	 	UL=0.268 KB	DL=0.0 KB	filtered= yes	Host=relay-8a6d3372.net.anydesk.com	
+ 172.217.22.97	 	UL=1.738 KB	DL=5.495 KB	filtered=-------	Host=tpc.googlesyndication.com	
+ 104.16.224.149	 	UL=9.284 KB	DL=1.394 KB	filtered=-------	Host=www.canva.com	
+ 185.143.233.110	 	UL=3.223 KB	DL=5.283 KB	filtered=-------	Host=shenoto.com	}
 #############################################

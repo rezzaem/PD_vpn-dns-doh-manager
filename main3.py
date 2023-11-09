@@ -9,7 +9,7 @@ import wmi
 #---------------------------------------
 doh_thread = None
 doh_running=False
-icon_status={"p":False,"d":False}
+icon_status={"p":False,"d":False,"v":False}
 icon=None
 
 
@@ -151,7 +151,10 @@ def doh(txt):
         icon_status["p"]=False
         update_trey('DOH (x,youtube tunnel) ','do','activate')
 
-
+def vpn():
+    global icon_status
+    icon_status['v']=True
+    update_trey(None,None)
 
 def on_quit(icon):
     global doh_running
@@ -159,7 +162,7 @@ def on_quit(icon):
         proxy_program.stop()
     setunset_proxy()
     # clear dns
-    dns.change_dns('default')
+    # dns.change_dns('default')
     icon.stop()
     exit()
     
@@ -167,14 +170,23 @@ def update_trey(txt,place,txt2=None): # place : do=doh , dn= dns , vp= vpn, ds= 
     global icon
     global icon_status
     global text_list
-    if icon_status['p']==True and icon_status['d']==False:
-        icon.icon=Image.open("pd_p_on.png")
-    elif icon_status['d']==True and icon_status['p']==False:
-        icon.icon=Image.open("pd_d_on.png")
-    elif icon_status['p']==True and icon_status['d']==True:
-        icon.icon=Image.open("pd_both_on.png")
-    elif icon_status['p']==False and icon_status['d']==False:
-        icon.icon=Image.open("pd_base2.png")
+    
+    if icon_status['p']==True and icon_status['d']==False and icon_status['v']==False:
+        icon.icon=Image.open("p.png")
+    elif icon_status['d']==True and icon_status['p']==False and icon_status['v']==False:
+        icon.icon=Image.open("d.png")
+    elif icon_status['p']==True and icon_status['d']==True and icon_status['v']==False:
+        icon.icon=Image.open("pd.png")
+    elif icon_status['p']==False and icon_status['d']==False and icon_status['v']==False:
+        icon.icon=Image.open("off.png")
+    elif icon_status['p']==True and icon_status['d']==False and icon_status['v']==True:
+        icon.icon=Image.open("pv.png")
+    elif icon_status['p']==False and icon_status['d']==True and icon_status['v']==True:
+        icon.icon=Image.open("vd.png")
+    elif icon_status['p']==False and icon_status['d']==False and icon_status['v']==True:
+        icon.icon=Image.open("v.png")
+    elif icon_status['p']==True and icon_status['d']==True and icon_status['v']==True:
+        icon.icon=Image.open("pvd.png")
     
     if place =='do':
         text_list[1] =txt
@@ -190,7 +202,7 @@ dns=DNS()
 
 at_first=dns.get_dns(True)
 text_list=['DNS','DOH (x,youtube tunnel) ',at_first,'activate'] 
-image = Image.open("pd_base2.png")  # Replace 'icon.png' with the path to your own icon
+image = Image.open("off.png")  # Replace 'icon.png' with the path to your own icon
 icon = Icon("Pd",image,"Pd manager :VPN Application", Menu(
 
     MenuItem(lambda text:text_list[0],Menu( #dns
@@ -216,7 +228,7 @@ icon = Icon("Pd",image,"Pd manager :VPN Application", Menu(
         ))
     )), #doh
      MenuItem('VPN',Menu(
-        MenuItem('comming soon',None)
+        MenuItem('comming soon',vpn)
     )),
     MenuItem('exit', on_quit)
 ))
