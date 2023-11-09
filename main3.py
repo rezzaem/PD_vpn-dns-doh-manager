@@ -94,22 +94,17 @@ class DNS :
                         current='unknown'
             except:
                     current='None'
-            
-            if known==True:
-                update_trey('✔️DNS','dn',current)
+            if at_first==False:
+                if known==True:
+                    update_trey('✔️DNS','dn',current)
+                else :
+                    update_trey('DNS','dn','unknown')
+            else:
+                if known==True:
+                    return f'active : {current}'
+                else :
+                    return f'active : unknown'
 
-            # else :
-
-            # if at_first==False:
-            #     update_trey(,'dn',)
-            # else :
-            #     return f'active : {current}'
-
-
-
-            
-            # else :
-            #     update_trey(None
 
 
 
@@ -187,11 +182,8 @@ def update_trey(txt,place,txt2=None): # place : do=doh , dn= dns , vp= vpn, ds= 
         icon.update_menu()
     elif place =='dn':
         text_list[0]=txt
-    elif place=='ds':
-        if txt2!=None:
-            text_list[2]=f'active : {txt2}'
-        else:
-            text_list[2]=f'active : {txt}'
+        text_list[2]=f'active : {txt2}'
+
 
 # -------- run --------
 dns=DNS()
