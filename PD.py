@@ -1,26 +1,13 @@
 
 import threading
-import winreg
+
 from pystray import Icon,Menu,MenuItem
 from PIL import Image
 import proxy_program
 from sys import exit
 import wmi
-from tendo import singleton
+import pythoncom
 #---------------------------------------
-#check program does not run before
-# This tries to create an instance of single SingleInstance, which will fail if there's already one existing.
-try:
-    me = singleton.SingleInstance()
-except singleton.SingleInstanceException:
-    print("Another instance is already running. Exiting.")
-    exit(0)
-except BaseException as e:
-    print(f"An unexpected error occurred: {e}")
-    exit(1)
-
-
-
 doh_thread = None
 doh_running=False
 icon_status={"p":False,"d":False,"v":False}
@@ -28,7 +15,7 @@ icon=None
 
 
 class DNS :
-        c = wmi.WMI()       
+        c = wmi.WMI(namespace="root\\standardcimv2")       
         SHECAN = ['178.22.122.100', '185.51.200.2']
         F403 = ['10.202.10.202', '10.202.10.102']
         RADAR=['10.202.10.10','10.202.10.11']
@@ -118,22 +105,24 @@ class DNS :
                     return f'active : {current}'
                 else :
                     return f'active : unknown'
+                
+        def setunset_proxy(self,proxy=False):
+            wmi_obj = self.c.Win32_InternetSettings()
+            if proxy is True:
+                wmi_obj.SetProxySettings(1, proxy) 
+            else :
+                wmi_obj.SetProxySettings(0, '')
 
 
 
 
-def setunset_proxy(proxy=None):
+# def setunset_proxy(wmi_obj,proxy=False):
 
-    INTERNET_SETTINGS = winreg.OpenKey(winreg.HKEY_CURRENT_USER,
-            r'Software\Microsoft\Windows\CurrentVersion\Internet Settings',
-            0, winreg.KEY_ALL_ACCESS)
     
-    if proxy is not None:
-        winreg.SetValueEx(INTERNET_SETTINGS, "ProxyEnable", 0, winreg.REG_DWORD, 1)
-        winreg.SetValueEx(INTERNET_SETTINGS, "ProxyServer", 0, winreg.REG_SZ, proxy)
-    else :
-        winreg.SetValueEx(INTERNET_SETTINGS, "ProxyEnable", 0, winreg.REG_DWORD, 0)
-        winreg.SetValueEx(INTERNET_SETTINGS, "ProxyServer", 0, winreg.REG_SZ, '')
+#     if proxy is True:
+#         wmi_obj.SetProxySettings(1, proxy) 
+#     else :
+#         wmi_obj.SetProxySettings(0, '')
 
 
 def doh(txt):
@@ -145,7 +134,7 @@ def doh(txt):
         def run_program():
             
                 
-            setunset_proxy('127.0.0.1:4500')
+            dns.setunset_proxy(True)
            
             proxy_program.run_it()
             doh_running=True
@@ -158,7 +147,7 @@ def doh(txt):
 
     else:
         
-        setunset_proxy()
+        dns.setunset_proxy()
         proxy_program.stop()
         doh_running=False
 
@@ -174,7 +163,7 @@ def on_quit(icon):
     global doh_running
     if doh_running==True:
         proxy_program.stop()
-    setunset_proxy()
+    dns.setunset_proxy()
     # clear dns
     # dns.change_dns('default')
     icon.stop()
@@ -212,9 +201,8 @@ def update_trey(txt,place,txt2=None): # place : do=doh , dn= dns , vp= vpn, ds= 
 
 
 # -------- run --------
-        
-dns=DNS()
 
+dns=DNS()
 at_first=dns.get_dns(True)
 text_list=['DNS','DOH (x,youtube tunnel) ',at_first,'activate'] 
 image = Image.open("off.png")  # Replace 'icon.png' with the path to your own icon

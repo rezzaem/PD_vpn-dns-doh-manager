@@ -19,28 +19,32 @@
 # else:
 #     print("No DNS servers found.")
 
-import wmi
+# import wmi
 
-def set_dns_servers(primary_dns, secondary_dns=None):
-    c = wmi.WMI()
-    for interface in c.Win32_NetworkAdapterConfiguration(IPEnabled=True):
-        if interface.DNSServerSearchOrder:
-            if secondary_dns:
-                dns = [primary_dns, secondary_dns]
-            else:
-                dns = [primary_dns]
-            return interface.SetDNSServerSearchOrder(dns)
+# def set_dns_servers(primary_dns, secondary_dns=None):
+#     c = wmi.WMI()
+#     for interface in c.Win32_NetworkAdapterConfiguration(IPEnabled=True):
+#         if interface.DNSServerSearchOrder:
+#             if secondary_dns:
+#                 dns = [primary_dns, secondary_dns]
+#             else:
+#                 dns = [primary_dns]
+#             return interface.SetDNSServerSearchOrder(dns)
 
-    return None
+#     return None
 
-# Set the DNS servers
-primary_dns_server = "1.1.1.1"  # Change this to your desired primary DNS server
-secondary_dns_server = "1.0.0.1"  # Change this to your desired secondary DNS server if applicable
+# # Set the DNS servers
+# primary_dns_server = "1.1.1.1"  # Change this to your desired primary DNS server
+# secondary_dns_server = "1.0.0.1"  # Change this to your desired secondary DNS server if applicable
 
-result = set_dns_servers(primary_dns_server, secondary_dns_server)
-if result == 0:
-    print("DNS servers have been successfully updated.")
-else:
-    print("Failed to update DNS servers.")
+# result = set_dns_servers(primary_dns_server, secondary_dns_server)
+# if result == 0:
+#     print("DNS servers have been successfully updated.")
+# else:
+#     print("Failed to update DNS servers.")
 
-x=input("for test : ")
+# x=input("for test : ")
+
+
+#----------
+# set proxy using wmi

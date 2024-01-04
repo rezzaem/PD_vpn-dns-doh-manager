@@ -593,7 +593,9 @@ def send_data_in_fragment(data , sock):
 
 
 
-def run_it():
+def run_it(provider):
+    global num_fragment
+    num_fragment=provider
     if stop_event:
         stop_event.clear()
     print("program start")
