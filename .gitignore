@@ -1,9 +1,0 @@
-# Ignore build and dist folders
-build/
-dist/
-
-# Ignore PD folder
-PD/
-# Ignore Tray_icon.zip file
-Tray_icon.zip
-
