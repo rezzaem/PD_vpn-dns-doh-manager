@@ -2,7 +2,7 @@
 
 
 a = Analysis(
-    ['Pd.py'],
+    ['help'],
     pathex=[],
     binaries=[],
     datas=[],
@@ -20,19 +20,17 @@ exe = EXE(
     a.scripts,
     [],
     exclude_binaries=True,
-    name='Pd',
+    name='help',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
     upx=True,
-    console=False,
+    console=True,
     disable_windowed_traceback=False,
     argv_emulation=False,
     target_arch=None,
     codesign_identity=None,
     entitlements_file=None,
-    uac_admin=True,
-    icon=['off.ico'],
 )
 coll = COLLECT(
     exe,
@@ -41,5 +39,5 @@ coll = COLLECT(
     strip=False,
     upx=True,
     upx_exclude=[],
-    name='Pd',
+    name='help',
 )

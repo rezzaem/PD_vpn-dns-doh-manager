@@ -1,21 +1,16 @@
 
 ########### new DNS resolved : ##############
-{'pagead2.googlesyndication.com': '172.217.22.66',
- 'securepubads.g.doubleclick.net': '142.251.37.66',
- 'clients4.google.com': '172.217.22.14',
- 'relay-8a6d3372.net.anydesk.com': '138.199.14.86',
- 'tpc.googlesyndication.com': '172.217.22.97',
- 'www.canva.com': '104.16.224.149',
- 'shenoto.com': '185.143.233.110'}
+{}
 #############################################
 
 ########### ALL INFO : ######################
-{203.32.120.226	 	UL=4.351 KB	DL=15.437 KB	filtered=-------	Host=cloudflare-dns.com	
- 142.251.37.66	 	UL=2.369 KB	DL=6.274 KB	filtered=-------	Host=securepubads.g.doubleclick.net	
- 172.217.22.66	 	UL=6.323 KB	DL=27.233 KB	filtered=-------	Host=pagead2.googlesyndication.com	
- 172.217.22.14	 	UL=4.729 KB	DL=9.302 KB	filtered=-------	Host=clients4.google.com	
- 138.199.14.86	 	UL=0.268 KB	DL=0.0 KB	filtered= yes	Host=relay-8a6d3372.net.anydesk.com	
- 172.217.22.97	 	UL=1.738 KB	DL=5.495 KB	filtered=-------	Host=tpc.googlesyndication.com	
- 104.16.224.149	 	UL=9.284 KB	DL=1.394 KB	filtered=-------	Host=www.canva.com	
- 185.143.233.110	 	UL=3.223 KB	DL=5.283 KB	filtered=-------	Host=shenoto.com	}
+{142.250.186.36	 	UL=9.816 KB	DL=68.768 KB	filtered=-------	Host=yt3.ggpht.com	
+ 216.239.38.120	 	UL=41.542 KB	DL=541.22 KB	filtered=-------	Host=www.youtube.com	
+ 203.32.120.226	 	UL=2.524 KB	DL=0.0 KB	filtered= yes	Host=cloudflare-dns.com	
+ 142.250.185.174	 	UL=3.252 KB	DL=8.542 KB	filtered=-------	Host=www.google-analytics.com	
+ 89.58.57.45	 	UL=2.097 KB	DL=0.0 KB	filtered= yes	Host=fonts.googleapis.com	
+ 45.157.177.108	 	UL=1.131 KB	DL=0.0 KB	filtered= yes	Host=googleads.g.doubleclick.net	
+ 172.217.16.206	 	UL=2.747 KB	DL=10.171 KB	filtered=-------	Host=accounts.youtube.com	
+ 193.26.157.66	 	UL=1.121 KB	DL=0.0 KB	filtered= yes	Host=lh3.googleusercontent.com	
+ 142.250.185.99	 	UL=0.577 KB	DL=5.316 KB	filtered=-------	Host=www.gstatic.com	}
 #############################################

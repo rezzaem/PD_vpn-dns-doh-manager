@@ -595,9 +595,13 @@ def send_data_in_fragment(data , sock):
 
 def run_it(provider):
     global num_fragment
-    num_fragment=provider
     if stop_event:
         stop_event.clear()
+    
+    if provider=='irancell':
+        num_fragment=10
+    elif provider=='hamrah':
+        num_fragment=80
     print("program start")
     start_log_writer()
     ("Now listening at: 127.0.0.1:"+str(listen_PORT),'\n for checking connection is stable check log file')
