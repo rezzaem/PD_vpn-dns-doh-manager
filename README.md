@@ -12,3 +12,6 @@ The Persona of this program is Iranians that have Internet problems look like #4
         Note : this program is under development and may change and insert so many features.
         So Feel Free to use on your windows 7/8/10/11...
         
+example of use ( in persian language ) :
+
+https://teamlifo.ir/chatgpt-windows-install-guide/
